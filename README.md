@@ -1,5 +1,7 @@
-# lotteryApp(Semi-finished) -Android training app
+# lotteryApp -Android training app
 ***Summary:*** Build the app about lottery for training, that is modelled on the baidu lottery.
+
+**Build status:** Semi-finished...
 
 **Shared link:** [百度网盘](http://pan.baidu.com/s/1dEEpe85)
 **Passwd:** 03a1
