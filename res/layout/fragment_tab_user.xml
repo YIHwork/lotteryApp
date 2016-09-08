@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightCyan2"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/user_title"
+        style="@style/chooseballPagePaddingStyle01"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/red"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn"
+            android:onClick="back"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/fragment_tab_user_title_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/user_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/user_btn_set" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/user_content"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/red"
+                android:paddingBottom="20dp"
+                android:paddingEnd="15dp"
+                android:paddingStart="5dp"
+                android:paddingTop="10dp" >
+
+                <ImageView
+                    android:id="@+id/user_portrait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/hall_lottery_edit" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toEndOf="@id/user_portrait"
+                    android:gravity="center"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="立即登录"
+                            android:textColor="@color/white"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/user_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="[未登录]"
+                            android:textColor="@color/white"
+                            android:textSize="10sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/user_msg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="登录后大奖会爱上你！"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/white_right_arrow" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/user_component_bg_border02"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:baselineAligned="false" >
+
+                <include
+                    android:id="@+id/lucky_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    layout="@layout/user_luck_statistical_cell" />
+
+                <include
+                    android:id="@+id/lucky_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_weight="1"
+                    layout="@layout/user_luck_statistical_cell" />
+
+                <include
+                    android:id="@+id/not_lucky_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    layout="@layout/user_luck_statistical_cell" />
+            </LinearLayout>
+
+            <com.hy.Utils.UserExpandableListView
+                android:id="@+id/betted_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:childDivider="@drawable/expandable_child_divider"
+                android:divider="@color/lightCyan2"
+                android:dividerHeight="5dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

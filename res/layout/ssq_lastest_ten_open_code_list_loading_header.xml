@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="bottom|center_horizontal"
+    android:background="@color/lightCyan2" >
+    
+    <TextView 
+        android:id="@+id/loading_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/history_goicon"
+        android:text="下拉看近10期开奖号码"
+        android:textColor="@color/grey"
+        android:layout_marginBottom="15dp"
+        android:gravity="bottom"/>
+    
+    <LinearLayout
+        android:id="@+id/loading_anim" 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone">
+        
+        <ImageView 
+            android:id="@+id/loading_anim_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/loading_img"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="loading..."
+            android:textColor="@color/grey"/>
+    </LinearLayout>
+
+</LinearLayout>

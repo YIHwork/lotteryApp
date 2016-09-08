@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightCyan2" >
+
+    <!-- imageView占位广告动画，待实现 -->
+    <ImageView 
+        android:id="@+id/news_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <!-- 用于显示主页bottom option navigation bar -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:background="@color/tab_bg"
+        android:orientation="horizontal"/>
+    
+    
+    <!-- fragment为启动app的首个tab的内容，切换tab时用其他的fragment替换即可 -->
+    <!-- fragment 
+        android:name="com.hy.mylottery.LotteryCellFragment"
+        android:id="@+id/lottery_cell_fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tab_grid"
+        android:layout_below="@id/news_view"/-->
+    <FrameLayout 
+        android:id="@+id/init_comp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_navigation_container"
+        android:layout_below="@id/news_view"/>
+
+	<TextView 
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_above="@id/bottom_navigation_container"
+        android:background="@color/white"/>
+</RelativeLayout>

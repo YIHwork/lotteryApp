@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="bottom|center_horizontal"
+    android:background="@color/lightCyan2"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/fragment_tab_notice_win_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/draw_win_icon"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="@string/fragment_tab_notice_win_msg_format"
+        android:textSize="16sp"
+        android:visibility="visible" />
+
+</LinearLayout>

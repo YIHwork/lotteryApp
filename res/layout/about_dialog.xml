@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:gravity="center"
+    android:padding="20dp" >
+    
+	<ImageView 
+	    android:layout_width="80dp"
+	    android:layout_height="80dp"
+	    android:src="@drawable/lottery"/>
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:text="一张彩票"
+	    android:textColor="@color/black"/>
+	
+	<TextView 
+	    android:id="@+id/current_version"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"
+	    android:textColor="@color/black"/>
+	
+	<TextView 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="20dp"
+	    android:text="邮箱：yi_work@qq.com"
+	    android:textColor="@color/dimGrey"
+	    android:textSize="12sp"/>
+</LinearLayout>

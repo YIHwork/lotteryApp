@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightCyan2"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/login_title"
+        style="@style/chooseballPagePaddingStyle01"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/red"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/back_btn"
+            android:paddingEnd="10dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toEndOf="@id/back_btn"
+            android:gravity="center"
+            android:text="@string/setting"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_component_bg_border"
+        android:orientation="vertical" >
+
+        <TextView 
+            android:id="@+id/notice_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/right_arrow"
+            android:padding="15dp"
+            android:text="开奖通知设置"
+            android:textSize="16sp"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/lightCyan2"/>
+        <TextView 
+            android:id="@+id/feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/right_arrow"
+            android:padding="15dp"
+            android:text="意见反馈"
+            android:textSize="16sp"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/lightCyan2"/>
+        <TextView 
+            android:id="@+id/help"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/right_arrow"
+            android:padding="15dp"
+            android:text="使用帮助"
+            android:textSize="16sp"/>
+        <TextView 
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@color/lightCyan2"/>
+        <TextView 
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/right_arrow"
+            android:padding="15dp"
+            android:text="关于一张彩票"
+            android:textSize="16sp"/>
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:id="@+id/check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_component_bg_border"
+        android:orientation="horizontal"
+        android:padding="15dp">
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="检查新版本"
+            android:textSize="16sp"/>
+        <TextView 
+            android:id="@+id/version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="v1.0"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

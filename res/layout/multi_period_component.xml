@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="32dip"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:text="追"
+        android:textSize="12sp"
+        android:textColor="@color/grey" />
+
+    <ImageView
+        android:id="@+id/multi_period_minus"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_chooseball_bottom_btn_mul_left_gray" />
+
+    <com.hy.mylottery.LotteryMultipleEditText
+        android:id="@+id/ed_multi_period"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_chooseball_bottom_btn_mul_middle"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:hint="1"
+        android:textColorHint="@color/grey"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textColor="@color/grey" />
+
+    <ImageView
+        android:id="@+id/multi_period_plus"
+        android:layout_width="32dp"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg_chooseball_bottom_btn_mul_right" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginStart="5dp"
+        android:text="期"
+        android:textSize="12sp"
+        android:textColor="@color/grey" />
+
+</LinearLayout>

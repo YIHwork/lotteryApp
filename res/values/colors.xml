@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="red">#ffff0000</color>
+    <color name="green">#ff00ff00</color>
+    <color name="blue">#ff0000ff</color>
+    <color name="blue02">#ff0099ff</color>
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="grey">#ffa1a1a1</color>
+    <color name="dimGrey">#ff696969</color>
+    <color name="shape_solid_init_color">#00000000</color>
+    <color name="shape_stroke_color">#ffcccccc</color>
+    <color name="login_pressed_solid_color">#ffff6600</color>
+    <color name="login_unpressed_solid_color">#ffaaaadd</color>
+    <color name="lottery_ball_red">#ffff2a00</color>
+    <color name="lottery_ball_blue">#ff007eff</color>
+    <color name="tab_bg">#ff363636</color>
+    <color name="orange">#ffffa500</color>
+    <color name="orangeRed">#ffff4500</color>
+    <color name="lightGray">#ffd3d3d3</color>
+    <color name="darkSlateGray1">#ff97ffff</color>
+    <color name="gray91">#ffe8e8e8</color>
+    <color name="lightCyan1">#ffe0ffff</color>
+    <color name="lightCyan2">#ffd1eeee</color>
+    <color name="springGreen3">#ff00cd66</color>
+    <color name="springGreen4">#ff008b45</color>
+    <color name="ssq_selector_status_bar_color">#ffee5522</color>
+    <color name="gray81">#ffcfcfcf</color>
+    <color name="gray71">#ffb5b5b5</color>
+    <color name="gray61">#ff9c9c9c</color>
+    <color name="gray51">#ff828282</color>
+    <color name="gray41">#ff696969</color>
+    <color name="gray31">#ff4f4f4f</color>
+    <color name="gray21">#ff363636</color>
+    <color name="gray11">#ff1c1c1c</color>
+    <color name="SkyBlue2">#ff7ec0ee</color>
+</resources>

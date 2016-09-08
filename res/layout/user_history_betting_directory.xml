@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/user_component_bg_border"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp"
+    android:paddingStart="30dp"
+    android:paddingEnd="20dp" >
+    
+	<TextView 
+	    android:id="@+id/name"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentStart="true"
+	    android:text="本次投注"
+	    android:textColor="@color/black"
+	    android:textSize="16sp"/>
+	<TextView 
+	    android:id="@+id/more"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentEnd="true"
+	    android:text="[更多]"
+	    android:textColor="@color/grey"
+	    android:textSize="12sp"/>
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+    <solid android:color="@color/lottery_ball_blue"/>
+    <size android:width="@dimen/lottery_ball_small_size"
+        android:height="@dimen/lottery_ball_small_size"/>
+    <stroke android:width="@dimen/stroke_width"
+        android:color="@color/grey"/>
+
+</shape>

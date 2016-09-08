@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/white"
+    android:padding="5dp">
+
+    <TextView 
+        android:id="@+id/ssq_cell"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/ball"
+        android:gravity="center"
+        android:tag="unselect" >
+    </TextView>
+
+</LinearLayout>
+

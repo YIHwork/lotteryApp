@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/lightCyan2" >
+
+    <RelativeLayout
+        android:id="@+id/notice_title"
+        style="@style/chooseballPagePaddingStyle01"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@color/red"
+        android:gravity="center_vertical" >
+
+        <ImageView
+            android:id="@+id/back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn"
+            android:onClick="back"
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="@string/fragment_tab_notice_title_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/pushSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:text="@string/push"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <com.hy.Utils.RefreshListView
+        android:id="@+id/notice_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="10dp"
+        android:divider="@color/lightCyan2"
+        android:headerDividersEnabled="true"
+        android:scrollbars="none" />
+    
+    <LinearLayout 
+        android:id="@+id/net_failed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+        
+        <ImageView 
+            android:layout_width="150dp"
+            android:layout_height="120dp"
+            android:src="@drawable/net_failue"/>
+        <TextView 
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:text="@string/net_failue"
+            android:textColor="@color/dimGrey"
+            android:textSize="18sp"
+            android:gravity="center"/>
+        <Button 
+            android:id="@+id/try_again"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:paddingStart="25dp"
+            android:paddingEnd="25dp"
+            android:background="@drawable/bg_chooseball_bottom_btn"
+            android:text="@string/click_refresh"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:drawableStart="@drawable/net_failue_refresh"
+            android:onClick="refresh"/>
+    </LinearLayout>
+
+</LinearLayout>
+

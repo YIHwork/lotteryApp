@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+    
+    <LinearLayout 
+        android:id="@+id/ssq_betting_slip_title"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        style="@style/chooseballPagePaddingStyle01"
+        android:gravity="center_vertical"
+        android:background="@color/red">
+        <ImageView 
+            android:id="@+id/ssq_betting_slip_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back_btn"
+            android:onClick="back"/>
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/betting_slip_title_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    
+    <TableLayout 
+        android:id="@+id/ssq_betting_slip_random"
+        android:layout_below="@id/ssq_betting_slip_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:shrinkColumns="*"
+        android:background="@drawable/lottery_cell_bg_border"
+        android:paddingBottom="3dp"
+        android:paddingTop="3dp"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp">
+        <TableRow >
+            <Button
+                android:id="@+id/random_one"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="+ 随机一注"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/orangeRed"
+                android:textSize="14sp"
+                android:background="@drawable/random_btn_bg_border"
+                android:layout_margin="2dp"/>
+            <Button
+                android:id="@+id/random_five"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="+ 随机五注"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/orangeRed"
+                android:textSize="14sp"
+                android:background="@drawable/random_btn_bg_border"
+                android:layout_margin="2dp"/>
+            <Button
+                android:id="@+id/random_ten"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:text="+ 随机十注"
+                android:ellipsize="middle"
+                android:singleLine="true"
+                android:textColor="@color/orangeRed"
+                android:textSize="14sp"
+                android:background="@drawable/random_btn_bg_border"
+                android:layout_margin="2dp"/>
+       	</TableRow>
+       	<ImageView 
+       	    android:id="@+id/jjc_list_top"
+       	    android:layout_width="match_parent"
+       	    android:layout_height="20dp"
+       	    android:background="@drawable/jjc_list_top"
+       	    android:layout_marginTop="5dp"/>
+    </TableLayout>
+    
+	<include 
+	    android:id="@+id/ssq_betting_slip_footer"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    layout="@layout/selected_result_bottom"/>
+	<TableLayout
+	    android:id="@+id/multiple_bar" 
+	    android:layout_above="@id/ssq_betting_slip_footer"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:stretchColumns="*"
+	    android:shrinkColumns="*"
+	    android:padding="5dp"
+	    android:divider="@color/black"
+	    android:background="@drawable/lottery_cell_bg_border">
+	    <TableRow >
+	        <include 
+	            android:layout_width="wrap_content"
+	            android:layout_height="32dp"
+	            layout="@layout/multi_period_component"/>
+	        <include 
+	            android:layout_width="wrap_content"
+	            android:layout_height="32dp"
+	            layout="@layout/multiple_component"/>"
+	    </TableRow>
+	</TableLayout>
+	
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_above="@id/multiple_bar"
+	    android:layout_below="@id/ssq_betting_slip_random"
+	    android:layout_marginEnd="15dp"
+	    android:layout_marginStart="15dp"
+	    android:layout_marginTop="-3dp"
+	    android:orientation="vertical" >
+	    
+		<ListView 
+	        android:id="@+id/ssq_betting_list"
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:dividerHeight="0dp"
+	        android:divider="@color/white"/>
+	    
+	</LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.hy.mylottery.SsqRootLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white" >
+
+    <LinearLayout
+        android:id="@+id/ssq_betting_slip_title"
+        style="@style/chooseballPagePaddingStyle01"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/red"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/ssq_betting_slip_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_btn"
+            android:onClick="back"
+            android:paddingEnd="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="@string/ssq_name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/next_lottery_date"
+        style="@style/chooseballPagePaddingStyleBase"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ssq_betting_slip_title"
+        android:background="@drawable/lottery_cell_bg_border"
+        android:text="@string/ssq_next_open_date_net_failure" />
+
+    <!-- ExpandableListView
+        android:id="@+id/last_ten_results"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/next_lottery_date"
+        android:visibility="gone"
+         /-->
+
+    <include
+        android:id="@+id/selected_result"
+        layout="@layout/selected_result_bottom" />
+
+    <TableLayout
+        android:id="@+id/selector_tools"
+        style="@style/chooseballPagePaddingStyle01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/selected_result"
+        android:background="@drawable/bg_chooseball_bottom_background"
+        android:shrinkColumns="*"
+        android:stretchColumns="*" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/random_bet"
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_chooseball_bottom_btn_unclick"
+                android:tag="RANDOM_BET"
+                android:text="@string/random_btn_bet"
+                android:textSize="12sp" />
+
+            <include
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                layout="@layout/multiple_component" />
+
+            <Button
+                android:id="@+id/add_to_slip"
+                android:layout_width="84dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_chooseball_bottom_btn_unclick"
+                android:text="@string/add_to_betting_list"
+                android:textSize="12sp" />
+        </TableRow>
+    </TableLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/selector_tools"
+        android:layout_below="@id/next_lottery_date" >
+
+        <com.hy.Utils.SsqSelectScrollView
+            android:id="@+id/select_ball"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <com.hy.mylottery.LastestTenOpenCodeListView
+                    android:id="@+id/ten_open_code_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightCyan2"
+                    android:divider="#00000000"
+                    android:dividerHeight="0dp"
+                    android:footerDividersEnabled="false"
+                    android:gravity="top|center_horizontal"
+                    android:headerDividersEnabled="false"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <LinearLayout 
+                    android:id="@+id/ssq_select_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <ImageView
+                    android:id="@+id/selector_pull_icon"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:src="@drawable/chooseball_pull_icon_down" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        style="@style/chooseballPagePaddingStyleBase"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="@string/selector_ssq_msg" />
+
+                    <LinearLayout
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/bg_sensor_phone"
+                        android:orientation="horizontal"
+                        android:padding="5dp" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/sensor_phone" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/selector_ssq_sensor" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.hy.mylottery.lotteryType.LotteryBallContainerTableLayout
+                    android:id="@+id/red_ball_container"
+                    style="@style/chooseballPagePaddingStyleBase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/shape_stroke_color" />
+
+                <com.hy.mylottery.lotteryType.LotteryBallContainerTableLayout
+                    android:id="@+id/blue_ball_container"
+                    style="@style/chooseballPagePaddingStyleBase"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:shrinkColumns="*"
+                    android:stretchColumns="*" />
+                </LinearLayout>
+            </LinearLayout>
+</com.hy.Utils.SsqSelectScrollView>
+
+        <ImageView
+            android:id="@+id/chooseball_buy_ani_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/redballbignew"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/chooseball_cart_count"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/chooseball_cart_count_bg"
+        android:gravity="center"
+        android:padding="3dp"
+        android:singleLine="true"
+        android:textColor="@color/orangeRed"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+</com.hy.mylottery.SsqRootLayout>

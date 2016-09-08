@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="58dp"
+    android:layout_height="103dp"
+    android:orientation="vertical"
+    android:background="@drawable/ball_click"
+    android:padding="5dp"
+    android:gravity="center_horizontal" >
+
+    <TextView
+        android:id="@+id/ssq_cell_popup"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:background="@drawable/lottery_ball_pressed_red_big_bg_border"
+        android:textColor="@color/white"
+        android:gravity="center" />
+    
+
+</LinearLayout>
